@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'still_timeregular';
+    src: url('/fonts/still_time-webfont.eot');
+    src: url('/fonts/still_time-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/still_time-webfont.woff') format('woff'),
+         url('/fonts/still_time-webfont.ttf') format('truetype'),
+         url('/fonts/still_time-webfont.svg#still_timeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'still_timeregular',Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 31px;
+	color: #585858;
+	background: transparent;
+}
+
+h1, h2 {
+	font-size: 64px;
+	line-height: 50px;
+	margin-bottom: 44px;
+	margin-top: 80px;
+	color: #FFF;
+	text-shadow: 0px 0px 16px #000;
+}
+h3 {
+	font-size: 45px;
+	color: #000;
+	margin-bottom: 30px;
+	margin-top: 80px;
+}
+
+h4 {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	color: #94bb3f;
+}
+
+p {
+	margin: 0 0 36px;
+}
+
+a {
+	color: #a2c73e;
+}
+a:hover {
+	color: #585858;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 800px;
+	z-index: 80;
+	position: relative;
+	text-align: center;
+}
+.scrollableContainer {
+	background: url(/images/star1.jpg) no-repeat center center;
+	background-size: cover;
+}
+/* Intro screen */
+.introScreen {
+	width: 100%;
+	min-height: 450px;
+	background: url(/images/gradient-sky.png) no-repeat center center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+.introScreen .bgLogo {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.introScreen .intro {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -180px;
+	margin-top: -75px;
+	width: 360px;
+	font-size: 25px;
+	color: #FFF;
+	text-align: center;
+}
+.introScreen .intro img {
+	margin-bottom: 16px;
+}
+.bounceMarker {
+	cursor: pointer;
+}
+.nodeLink {
+	display: inline-block;
+	width: 40px;
+	height: 80px;
+}
+.bounceMarker.bouncing {
+    -moz-animation-name: bounce;
+    -moz-animation-duration: 1s;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-iteration-count: infinite ;
+    
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-iteration-count: infinite ;
+}
+@-moz-keyframes bounce {
+	0% {
+		transform: translate(0,0);
+		-ms-transform: translate(0,0); /* IE 9 */
+		-webkit-transform: translate(0,0); /* Safari and Chrome */
+	}
+	50% {
+		transform: translate(0,40px);
+		-ms-transform: translate(0,40px); /* IE 9 */
+		-webkit-transform: translate(0,40px); /* Safari and Chrome */
+	}
+  100% {
+  	transform: translate(0,0);
+		-ms-transform: translate(0,0); /* IE 9 */
+		-webkit-transform: translate(0,0); /* Safari and Chrome */
+  }
+}
+@-webkit-keyframes bounce {
+	0% {
+		transform: matrix(1,0,0,1,0,0);
+		-ms-transform: matrix(1,0,0,1,0,0);
+		-webkit-transform: matrix(1,0,0,1,0,0);
+	}
+	40% {
+		transform: matrix(1,0,0,1,0,30);
+		-ms-transform: matrix(1,0,0,1,0,30);
+		-webkit-transform: matrix(1,0,0,1,0,30);
+	}
+	45% {
+		transform: matrix(1,0,0,0.9,0,32);
+		-ms-transform: matrix(1,0,0,0.9,0,32);
+		-webkit-transform: matrix(1,0,0,0.9,0,32);
+	}
+	50% {
+		transform: matrix(1,0,0,0.8,0,34);
+		-ms-transform: matrix(1,0,0,0.8,0,34);
+		-webkit-transform: matrix(1,0,0,0.8,0,34);
+	}
+	55% {
+		transform: matrix(1,0,0,0.9,0,32);
+		-ms-transform: matrix(1,0,0,0.9,0,32);
+		-webkit-transform: matrix(1,0,0,0.9,0,32);
+	}
+	60% {
+		transform: matrix(1,0,0,1,0,30);
+		-ms-transform: matrix(1,0,0,1,0,30);
+		-webkit-transform: matrix(1,0,0,1,0,30);
+	}
+  100% {
+  	transform: matrix(1,0,0,1,0,0);
+		-ms-transform: matrix(1,0,0,1,0,0);
+		-webkit-transform: matrix(1,0,0,1,0,0);
+  }
+}
+
+.pageScreen {
+	padding-bottom: 80px;
+	border-top: 1px solid #FFF;
+	position: relative;
+}
+.overNode {
+	background: url(/images/about-bg.png) top center no-repeat;
+}
+img.nvrg {
+	float: right;
+}
+.mijnAanpak {
+	background: #f4f4f4 url(/images/approach-bg.png) top center no-repeat;
+}
+.mijnAanpak p {
+	font-size: 15px;
+}
+
+.aanpakCross {
+	width: 101px;
+	height: 101px;
+	background: transparent url(/images/approach-arrows.png) top center no-repeat;
+	margin-top: 8px;
+	margin-left: -30px;
+}
+.aanpakCross.step2 {
+	background-position: center -101px;
+}
+.aanpakCross.step3 {
+	background-position: center -203px;
+}
+.aanpakCross.step4 {
+	background-position: center -305px;
+}
+.aanpakCross.step5 {
+	background-position: center -407px;
+	height: 102px;
+}
+
+.tarieven {
+	color: #FFF;
+	background: #a2ca3c url(/images/pricing-bg.png) top center no-repeat;
+	background: url(/images/pricing-bg.png) top center no-repeat, 
+		-webkit-gradient(
+		linear,
+		left top,
+		left top,
+		color-stop(0, #72A140),
+		color-stop(0.59, #A3CC3C)
+	);
+	background: url(/images/pricing-bg.png) top center no-repeat, -o-linear-gradient(left top, #72A140 0%, #A3CC3C 59%);
+	background: url(/images/pricing-bg.png) top center no-repeat, -moz-linear-gradient(left top, #72A140 0%, #A3CC3C 59%);
+	background: url(/images/pricing-bg.png) top center no-repeat, -webkit-linear-gradient(left top, #72A140 0%, #A3CC3C 59%);
+	background: url(/images/pricing-bg.png) top center no-repeat, -ms-linear-gradient(left top, #72A140 0%, #A3CC3C 59%);
+	background: url(/images/pricing-bg.png) top center no-repeat, linear-gradient(to left top, #72A140 0%, #A3CC3C 59%);
+	overflow: hidden;
+}
+.tarieven h3 {
+	color: #FFF;
+}
+.tarieven .bgLogo {
+	width: 561px;
+	height: 390px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.tarieven .pricingTable {
+	margin-bottom: 30px;
+}
+.tarieven .pricingTable tr td:first-child {
+	width: 467px;
+}
+.remark {
+	font-style: italic;
+	font-size: 13px;
+}
+.tarieven .pricingTable .remark {
+	display: block;
+	margin-top: 8px;
+}
+
+.photoMargot {
+	margin-top: 56px;
+}
+
+.aboutMargot h3 {
+	margin-top: 80px;
+	margin-bottom: 16px;
+}
+
+p.subtitle {
+	font-size: 22px;
+	color: #878787;
+}
+.iconCircle {
+	background-color: #0274b3;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	color: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.socialLink {
+	line-height: 48px;
+	color: #0274b3;
+}
+
+.contact {
+	min-height: 500px;
+}
+.map {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+}
+.contactInfo {
+	background-color: #999;
+	height: 72px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 3;
+	top: 120px;
+	width: 100%;
+	color: #FFF;
+	font-size: 24px;
+	text-align: center;
+	line-height: 72px;
+}
+.contactInfo a {
+	color: #ddebb8;
+}

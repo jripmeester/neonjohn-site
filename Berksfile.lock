@@ -1,0 +1,72 @@
+{
+  "sources": {
+    "apache2": {
+      "locked_version": "1.9.6"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "build-essential": {
+      "locked_version": "2.0.0"
+    },
+    "dotdeb": {
+      "locked_version": "0.0.1",
+      "git": "git://github.com/homemade/chef-dotdeb.git",
+      "ref": "a3633b25f1f011da73cc510d9516c09ad0277497"
+    },
+    "memcached": {
+      "locked_version": "1.7.2"
+    },
+    "mysql": {
+      "locked_version": "4.1.2"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "php": {
+      "locked_version": "1.4.6"
+    },
+    "postfix": {
+      "locked_version": "3.1.6"
+    },
+    "app": {
+      "path": "./site-cookbooks/app"
+    },
+    "iptables": {
+      "locked_version": "0.13.0"
+    },
+    "logrotate": {
+      "locked_version": "1.5.0"
+    },
+    "pacman": {
+      "locked_version": "1.1.1"
+    },
+    "runit": {
+      "locked_version": "1.5.10"
+    },
+    "yum": {
+      "locked_version": "3.1.4"
+    },
+    "yum-epel": {
+      "locked_version": "0.3.4"
+    },
+    "homebrew": {
+      "locked_version": "1.5.4"
+    },
+    "windows": {
+      "locked_version": "1.30.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.5"
+    },
+    "xml": {
+      "locked_version": "1.2.2"
+    },
+    "iis": {
+      "locked_version": "2.0.4"
+    },
+    "apache": {
+      "locked_version": "0.0.5"
+    }
+  }
+}

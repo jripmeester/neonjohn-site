@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.45, minimum-scale=0.45, user-scalable=no">
+    <!--<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">-->
+
+    <title>NeonJohn; Disco to the stars and beyond</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" >
+    <!--<div class="navbar navbar-default navbar-fixed-top atIntro" id="navbarScroll" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          	<li id="introButton"><a href="#introScreen"></a></li>
+            <li id="mixesButton"><a href="#mixes">Mixes</a></li>
+            <li id="bookingsButton"><a href="#bookings">Bookings</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    <!--</div>-->
+    <div class="scrollableContainer" data-stellar-background-ratio="0">
+			<div id="introScreen" class="introScreen" >
+	  		<div class="intro">
+	  			<img src="/images/logo.png" />
+	    	</div>
+	   	</div>
+	   	<div class="container">
+	   		<h1>Nothing Equals Our Nights</h1>
+	   		<iframe width="600" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/102822528&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+	   		<iframe width="600" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139595192%3Fsecret_token%3Ds-0TP7Q&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+	   	</div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scrollability.js"></script>
+    <script src="/js/jquery.stellar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+    	$('.introScreen' ).height( $( window ).height()-(($( window ).height()/100)*30) );
+    	$( window ).resize(function() {
+			  $('.introScreen' ).height( $( window ).height()-(($( window ).height()/100)*30) );
+			});
+			$.stellar({
+				responsive: true,
+				positionProperty: 'transform'
+			});
+			
+    </script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-48813226-1', 'neonjohn.net');
+		  ga('send', 'pageview');
+		
+		</script>
+  </body>
+</html>
