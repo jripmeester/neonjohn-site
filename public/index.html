@@ -25,6 +25,14 @@
   </head>
 
   <body data-spy="scroll" >
+  	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_EN/all.js#xfbml=1&appId=120527091457515";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
     <!--<div class="navbar navbar-default navbar-fixed-top atIntro" id="navbarScroll" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,12 +54,48 @@
 			<div id="introScreen" class="introScreen" >
 	  		<div class="intro">
 	  			<img src="/images/logo.png" />
+				<div class="fb-like" data-href="https://www.facebook.com/NeonJohnmusic" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark" ></div>
 	    	</div>
 	   	</div>
 	   	<div class="container">
-	   		<h1>Nothing Equals Our Nights</h1>
+	   		<h2>Nothing Equals Our Nights</h2>
 	   		<iframe width="600" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/102822528&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
 	   		<iframe width="600" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139595192%3Fsecret_token%3Ds-0TP7Q&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+	   	</div>
+	   	<div class="container">
+	   		<h2>Want some Neon on your party?</h2>
+			<form class="form-horizontal" role="form" id="bookingForm">
+			  <div class="form-group">
+			    <label for="inputName" class="col-sm-5 control-label" >Name *</label>
+			    <div class="col-sm-4">
+			      <input type="text" class="form-control" id="inputName" name="name" placeholder="Please put your name here...">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail" class="col-sm-5 control-label" >Email *</label>
+			    <div class="col-sm-4">
+			      <input type="email" class="form-control" id="inputEmail" name="email" placeholder="and your email.">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPhone" class="col-sm-5 control-label">Phone</label>
+			    <div class="col-sm-4">
+			      <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="A phonenumber would be nice...">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-5 control-label">Your message to NJ</label>
+			    <div class="col-sm-4">
+			      <textarea name="message" id="inputMessage" class="form-control" rows="3" placeholder="destination of your expedition, crew members, coördinates of your galaxy..."></textarea>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <div class="col-sm-offset-5 col-sm-5 form-button-container">
+			      <button type="submit" id="bookingSubmitButton" class="btn btn-default btn-custom">Send my request for a bit of Neon</button>
+			    </div>
+			  </div>
+			</form>
 	   	</div>
     </div>
 
@@ -62,6 +106,8 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scrollability.js"></script>
     <script src="/js/jquery.stellar.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/additional-methods.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript">
     	$('.introScreen' ).height( $( window ).height()-(($( window ).height()/100)*30) );
@@ -71,6 +117,39 @@
 			$.stellar({
 				responsive: true,
 				positionProperty: 'transform'
+			});
+			
+			$("#bookingForm").validate({
+				rules: {
+					name: {
+						required: true
+					},
+					email: {
+						required: true
+					}
+				},
+				submitHandler: function(form) {
+
+					$('#bookingSubmitButton').text( 'Wait for it....' );
+
+					var form = $(form);
+					var url = '/handlers/mail.php';
+					var formData = form.serialize();
+					formData+='&secureCode=neonJohnSecureCode80sItalo';
+
+					// Send the data using post
+					var posting = $.post( url, formData);
+					posting.done(function( data ) {
+						var obj = jQuery.parseJSON( data );
+						if(obj.succes == true) {
+						  $( '#bookingForm' ).fadeOut( 'slow', function() {
+					  		$( '#bookingForm' ).replaceWith( '<p>And.... it\s gone! Thank you for your request. We\ll contact you as soon as possible.</p><p>Grazie mille,<br />NJ</p>');
+						  });
+						} else {
+							alert('Oops there where some problems sending out your request. Please try again later or contact me at john@neonjohn.net.');
+						}
+					});
+				}
 			});
 			
     </script>
